@@ -45,7 +45,7 @@ public class UserController {
 		return "redirect:/";
 	}
 
-	@RequestMapping("/{id}/edit")
+	@GetMapping("/{id}/edit")
 	public String edit(Model model, @PathVariable("id") int id) {
 		model.addAttribute("user", dao.getUserById(id));
 		return "/edit";
